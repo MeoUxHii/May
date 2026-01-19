@@ -1,0 +1,100 @@
+Tập tành khởi nghiệp buôn 'bột mì' với băng đảng khét tiếng, ai dè bị tụi nó lật mặt nhanh hơn người yêu cũ. Cướp sạch hàng, lột sạch ví, giờ bạn đúng nghĩa còn đúng cái nịt. Bay mất {amount}.
+Đi ăn trộm chó nhưng gặp ngay con chó nghiệp vụ về hưu. Nó rượt cho chạy tuột quần, rớt mất ví tiền. Thiệt hại {amount}.
+Định móc túi người đi đường, ai ngờ móc trúng túi của cảnh sát hình sự đang đi vi hành. Nộp phạt hành chính và "tiền trà nước" hết {amount}.
+Hack Facebook người nổi tiếng để tống tiền, nhưng quên fake IP. Bị C50 mời lên phường uống trà, nộp phạt {amount}.
+Cầm đồ hàng fake để lừa chủ tiệm, bị chủ tiệm check var phát hiện gọi hội đồng ra "tẩm quất". Tiền thuốc men hết {amount}.
+Đi cướp ngân hàng mà mang súng nước. Bảo vệ cười khinh bỉ rồi tịch thu luôn khẩu súng đồ chơi xịn của cháu bạn. Mất mặt và mất {amount} mua súng mới đền cháu.
+Đột nhập nhà đại gia định khoắng đồ, ai ngờ nhà lắp hệ thống an ninh bằng giọng nói vợ đại gia. Nghe bả chửi sợ quá ngất xỉu, bị lột sạch tư trang trị giá {amount}.
+Rải đinh bẫy xe để vá ép, nghiệp quật thế nào tự mình đi dẫm phải đinh của mình. Thay lốp xe xịn hết {amount}.
+Giả danh công an gọi điện lừa đảo các cụ già, gặp trúng cụ là cựu trinh sát. Cụ troll cho tốn tiền điện thoại, lại còn bị truy ra vị trí phạt {amount}.
+Đi buôn lậu iPhone qua biên giới, bị hải quan bắt được vì cái nách kẹp hàng quá to và hôi. Tịch thu hàng và phạt {amount}.
+Tính làm hacker lỏ đánh sập trang web trường để xóa điểm, lỡ tay xóa nhầm database nợ của căng tin. Bị bà căng tin bắt đền {amount}.
+Ăn trộm xe máy quên bẻ khóa, cứ thế dắt bộ 5 cây số. Mệt quá ngồi nghỉ thì bị chủ xe tóm được, đền bù tổn thất tinh thần {amount}.
+Tham gia đua xe trái phép, đang bốc đầu thì rớt mất hàm răng giả. Tiền làm lại răng mới tốn {amount}.
+Đi đòi nợ thuê, gặp con nợ là "thánh lầy". Nó không những không trả mà còn vay ngược lại bạn tiền xe ôm đi về. Mất ngu {amount}.
+Trèo tường vào nhà hàng xóm trộm wifi, trượt chân ngã vào chuồng heo. Đền tiền sửa chuồng và tiền tắm heo hết {amount}.
+Mở sòng bạc chui, đang xóc đĩa hăng say thì mẹ gánh nước đi qua. Sợ mẹ đánh, bạn vơ vội tiền chạy, rơi mất {amount}.
+Giả làm ăn xin để lừa tình thương, bị giang hồ khu vực ra thu tiền bảo kê vỉa hè. Mất {amount}.
+Đi rải tờ rơi cho vay nặng lãi, bị dân phòng bắt quả tang bắt đi lột từng tờ một. Nộp phạt vi phạm vệ sinh môi trường {amount}.
+Trộm long tráo phụng định đổi tiền giả lấy tiền thật, bị máy đếm tiền nó kêu "ét o ét". Bỏ của chạy lấy người, mất cọc {amount}.
+Ship hàng cấm (bánh tráng trộn) vào khu cách ly nhưng hét giá cắt cổ. Bị khách bom hàng, ế sưng xỉa, lỗ vốn {amount}.
+Đi câu trộm cá ở hồ dịch vụ, bị chủ hồ bắt được bắt mua lại toàn bộ số cá trong hồ với giá trên trời. Mất {amount}.
+Định bắt cóc tống tiền con nhà giàu, ai ngờ bắt nhầm con của chủ nợ. Bị trừ nợ và phạt thêm {amount}.
+Cướp tiệm vàng, đập tủ kính mãi không vỡ vì kính cường lực xịn. Mảnh kính bắn ngược lại làm rách áo hiệu. Thiệt hại {amount}.
+Đi trấn lột học sinh tiểu học, bị tụi nó mách phụ huynh. Phụ huynh đến tận nhà bắt đền tiền kẹo và tiền dỗ dành trẻ con hết {amount}.
+Hack nick game của thằng bạn để bán đồ, bị nó biết mật khẩu Facebook vào post ảnh dìm hàng bạn. Phải trả {amount} để nó xóa ảnh.
+Đi buôn pháo lậu ngày Tết, pháo nổ sớm làm cháy xém mái tóc lãng tử. Tiền đi cắt tóc và bồi thường cháy nổ hết {amount}.
+Vào siêu thị ăn trộm sô cô la, bị camera soi được. Bảo vệ bắt mua lại với giá gấp 10 lần làm gương. Mất {amount}.
+Giả làm thầy bói lừa đảo, phán bừa bị người ta đánh cho tím mắt. Tiền thuốc thang hết {amount}.
+Cạy cửa xe ô tô định trộm đồ, cạy nhầm xe của mình lúc say rượu. Sáng ra thấy xe hỏng khóa, sửa mất {amount}.
+Đi rình trộm nhà tắm nữ, bị hắt nước sôi vào người. Bỏng nhẹ nhưng bỏng ví nặng, tốn {amount} tiền thuốc.
+Lập web cá độ bóng đá lừa đảo, bị hacker mũ trắng đánh sập và công khai danh tính. Phải chi {amount} để trốn đi biệt xứ.
+Mua vé số giả để đi lừa đại lý, bị chủ đại lý soi bằng kính hiển vi. Bị phạt đền danh dự {amount}.
+Cướp giật túi xách, chạy được một đoạn thì hết hơi vì hút thuốc lá quá nhiều. Bị dân vây bắt, nộp phạt {amount}.
+Vào nhà nghỉ định gắn camera quay lén, khoan tường trúng đường ống nước. Nước phun ngập phòng, đền chủ nhà nghỉ {amount}.
+Đi vặt trộm xoài nhà hàng xóm, bị chó đuổi leo lên cây không xuống được. Phải gọi cứu hỏa và trả phí giải cứu {amount}.
+Bán hàng đa cấp lừa đảo, lôi kéo nhầm xã hội đen. Bị ép mua lại toàn bộ sản phẩm với giá {amount}.
+Giả danh cán bộ kiểm tra phòng cháy chữa cháy để vòi tiền, gặp đúng nhà sếp sở PCCC. Bị phạt hành chính {amount}.
+Chế tạo thuốc lắc (lắc vòng) dỏm, khách dùng xong không phê mà bị tiêu chảy. Đền tiền viện phí {amount}.
+Đi trấn lột vé xem phim của các cặp đôi, bị hội FA đánh hội đồng vì ghen tị. Tiền thuốc men hết {amount}.
+Trộm quần lót nữ đem bán, bị phát hiện là biến thái. Nộp phạt vi phạm thuần phong mỹ tục {amount}.
+Lên mạng rao bán tiền giả, giao dịch xong mới biết tiền khách trả cũng là tiền giả nốt. Mất công in ấn tốn {amount}.
+Đi cưa bom lấy thuốc nổ bán, cưa nhầm bình gas cũ. Nổ banh xác cái lán, đền bù thiệt hại {amount}.
+Bắt trộm gà, gà gáy to quá làm lộ vị trí. Bỏ chạy vấp ngã gãy răng, tốn {amount} đi nha khoa.
+Đi rải đinh tặc, xe mình thủng lốp dắt bộ lòi kèn. Vào quán sửa xe bị chém đẹp {amount}.
+Hack thẻ tín dụng mua đồ online, ship về địa chỉ nhà mình. Công an đến tận cửa gõ cửa, nộp phạt {amount}.
+Cướp tiệm tạp hóa, vớ nhầm bịch muối tưởng là đường phèn (ma túy đá). Bị chủ quán cười vào mặt và bắt đền cái cửa kính vỡ giá {amount}.
+Đi quăng lưới bắt trộm chó, quăng nhầm vào xe máy người đi đường làm họ ngã. Đền tiền sửa xe và thuốc men {amount}.
+Giả làm ăn xin què chân, thấy công an chạy nhanh hơn vận động viên điền kinh. Rớt mất cái lon đựng tiền có {amount}.
+Vào chùa trộm tiền công đức, bị sư thầy bắt quả tang bắt ở lại quét lá đa 1 tháng. Mất thu nhập tương đương {amount}.
+Đột nhập biệt thự, thấy gia chủ đang cãi nhau to. Nổi máu nhiều chuyện đứng nghe, bị phát hiện và tóm gọn. Nộp phạt {amount}.
+Đi buôn lậu nội tạng (lòng lợn) không rõ nguồn gốc. Bị quản lý thị trường tịch thu và phạt {amount}.
+Giả làm ma dọa người đi đường để cướp, gặp người yếu bóng vía ngất xỉu. Phải đưa đi cấp cứu và trả viện phí {amount}.
+Cắt trộm dây điện bán đồng nát, bị điện giật tê người tóc dựng đứng. Tiền đi bệnh viện kiểm tra tim mạch hết {amount}.
+Đi chăn dắt trẻ em đi ăn xin, bọn trẻ đình công đòi tăng lương. Phải trả thêm {amount} để tụi nó không mách công an.
+Mở tiệm cầm đồ nhưng toàn cầm đồ ăn trộm. Bị công an hốt trọn ổ, nộp phạt và tịch thu tang vật trị giá {amount}.
+Đi cướp xe taxi, không biết lái xe số sàn nên loay hoay mãi không chạy được. Bị tài xế và dân lôi ra đánh, mất {amount}.
+Trộm chó bị dân làng vây bắt, phải nhảy xuống ao trốn. Uống no nước cống và mất ví tiền {amount}.
+Giả danh đại gia lừa tình lừa tiền, gặp trúng "máy bay" cao tay hơn. Bị lừa lại mất sạch vốn liếng {amount}.
+Hack cam nhà người khác xem trộm, xem đúng cảnh kinh dị ám ảnh cả đời. Phải đi điều trị tâm lý tốn {amount}.
+Đi móc túi ở bến xe buýt, móc nhầm túi rác của lao công. Bị bắt dọn vệ sinh bến xe cả ngày, mất ngày công trị giá {amount}.
+Cướp giật dây chuyền vàng, chạy bán sống bán chết đem đi bán mới biết là vàng giả. Lỗ tiền xăng xe và công sức {amount}.
+Đột nhập vào trường học trộm đề thi, lấy nhầm đề thi lại năm ngoái. Bị bảo vệ bắt, nộp phạt {amount}.
+Đi trấn lột đồ ăn sáng của học sinh, bị ngộ độc thực phẩm vì học sinh mua đồ ôi thiu. Tiền rửa ruột hết {amount}.
+Làm giấy tờ giả để vay vốn ngân hàng, chữ ký xấu quá nhân viên không dịch được. Bị nghi ngờ báo công an, mất phí làm giấy tờ giả {amount}.
+Đi buôn lậu vũ khí (dao nhựa) cho trẻ em. Bị phụ huynh kiện vì làm trẻ con bị thương, đền bù {amount}.
+Trèo cột điện cắt cáp quang, bị dân cả xóm ra chửi vì mất mạng lúc đang combat game. Đền tiền nối mạng cho cả xóm hết {amount}.
+Giả làm shipper giao hàng bom mìn (giả), bị khách bóc phốt trên mạng xã hội. Phải đền bù danh dự và xóa page, thiệt hại {amount}.
+Đi cướp tiệm bánh mì, bị chủ tiệm cầm dao phay rượt chạy té khói. Rơi mất đôi dép hiệu giá {amount}.
+Bắt cóc con tin đòi tiền chuộc, con tin ăn nhiều quá nuôi tốn cơm. Gia đình không chuộc, thả về lỗ tiền ăn {amount}.
+Đi trộm xe đạp điện, hết điện giữa đường phải đạp bộ. Bị chủ xe đuổi kịp bắt đền tiền thay bình ắc quy mới giá {amount}.
+Vào cửa hàng tiện lợi trộm bia, lon bia rớt xuống chân sưng vù. Tiền đi chụp X-quang hết {amount}.
+Giả làm người tàn tật đi bán vé số dạo, gặp người quen quên mất đứng dậy chào. Bị bóc mẽ, phải trả lại tiền ủng hộ {amount}.
+Đi đòi nợ thuê bằng mắm tôm, ném ngược chiều gió mắm tôm bay hết vào người mình. Tiền đi spa tắm trắng khử mùi hết {amount}.
+Cướp mic của ca sĩ hội chợ để hát, hát dở quá bị khán giả ném chai lọ lên sân khấu. Bị thương nhẹ, tốn {amount} bông băng.
+Hack nick Free Fire của trẻ trâu, bị phụ huynh nó gọi điện mắng vốn cả tiếng đồng hồ. Tốn tiền cước điện thoại nghe chửi hết {amount}.
+Đi rình mò nhà nghỉ, bị hiểu nhầm là đánh ghen thuê. Bị hội chị em tẩn cho một trận, mất {amount} tiền thuốc.
+Trộm nắp cống bán sắt vụn, tối đi về lọt hố do chính mình để lại. Gãy chân, viện phí hết {amount}.
+Mở dịch vụ đẻ thuê lừa đảo, nhận tiền cọc xong bùng. Bị người ta tìm được tạt sơn vào nhà, tốn tiền sơn lại nhà hết {amount}.
+Đi cướp ngân hàng bằng... chuối, dọa là súng. Nhân viên ngân hàng bóc chuối ăn ngon lành. Quê độ đi về, mất tiền mua nải chuối {amount}.
+Giả danh con ông cháu cha để xin đểu, gặp đúng con ông cháu cha thật. Bị dạy cho một bài học và nộp phạt {amount}.
+Buôn lậu ngà voi (làm từ nhựa), bị bắt vì tội lừa đảo người tiêu dùng và buôn bán hàng giả. Phạt {amount}.
+Đi trộm long nhãn, bị ong đốt sưng mặt. Tiền thuốc chống dị ứng hết {amount}.
+Vào nhà dân trộm quần áo phơi, lấy nhầm đồ của người bị bệnh ngoài da. Bị lây bệnh, chữa trị tốn {amount}.
+Định làm hacker đánh sập sàn chứng khoán, máy tính cùi bắp quá bị nổ CPU. Tiền mua máy mới hết {amount}.
+Đi cướp tiệm vàng mã, vơ vét được một đống vàng... giấy. Đốt cho các cụ cũng không hết, lỗ công đi cướp trị giá {amount}.
+Giả làm nhân viên điện lực vào nhà thu tiền điện, bị chủ nhà phát hiện đồng hồ điện ở ngoài cột. Bị giữ lại đền tiền trà nước {amount}.
+Đi trộm chậu cây cảnh, chậu nặng quá làm sụp lưng. Tiền vật lý trị liệu hết {amount}.
+Cướp xe ôm công nghệ, không biết dùng app tắt chuyến đi. Bị tổng đài định vị báo công an tóm gọn, nộp phạt {amount}.
+Vào rạp chiếu phim quay lén phim bom tấn, bị nhân viên rạp bắt quả tang. Phạt vi phạm bản quyền {amount}.
+Đi bẻ gương ô tô Mercedes, bẻ gãy tay mình mà gương không rụng. Tiền bó bột hết {amount}.
+Giả làm hot girl lừa thẻ cào, bị các "daddy" bắt call video check hàng. Lộ mặt thật là đực rựa, bị report bay nick chứa {amount}.
+Đi trộm gà chọi, bị gà mổ thủng tay. Tiền tiêm phòng uốn ván hết {amount}.
+Cướp giật điện thoại, mở ra thấy toàn ảnh dìm hàng của mình do người yêu cũ giữ. Chuộc lại điện thoại tốn {amount}.
+Đột nhập cửa hàng điện thoại, lấy nhầm mô hình trưng bày. Bán không ai mua, lỗ tiền xăng xe đi trộm {amount}.
+Đi rải tờ rơi "Hút hầm cầu" dán đè lên biển báo giao thông. Bị dân phòng bắt đi cạo sạch và phạt {amount}.
+Trộm xe đạp của trẻ em, bị ngã sấp mặt vì xe có bánh phụ. Bị phụ huynh bắt đền xe mới {amount}.
+Giả làm người nước ngoài để bán đồ lưu niệm đểu giá cao, gặp ngay giáo viên tiếng Anh. Bị bóc mẽ và phạt {amount}.
+Đi cướp sòng bài, gặp đúng sòng bài của xã hội đen. Bị bắt làm tạp vụ trừ nợ dần, mất thu nhập {amount}.
+Vào vườn trộm sầu riêng, sầu riêng rụng trúng đầu. U đầu mẻ trán, viện phí hết {amount}.
+Quyết định hoàn lương đi đầu thú để nhận khoan hồng, nhưng đồn công an đóng cửa nghỉ trưa. Đứng đợi bị nắng say nắng, tốn tiền thuốc {amount}.
