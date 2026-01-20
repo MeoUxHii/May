@@ -88,7 +88,7 @@ async function handleHunt(message) {
 
     // 1. CHECK TIỀN & TRỪ TIỀN (GLOBAL)
     const userBalance = await economy.getBalance(userId); 
-    const huntPrice = HUNT_CONFIG.PRICE || 250;
+    const huntPrice = HUNT_CONFIG.PRICE;
 
     if (userBalance.cash < huntPrice) {
         return message.reply(`Bạn không đủ tiền mặt! Cần **${huntPrice.toLocaleString()}** ${CURRENCY} để mua vé đi săn.`);

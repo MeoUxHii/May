@@ -4,7 +4,10 @@ const E = require('./emoji'); // Import trung tâm Emoji
 const ALLOWED_CHANNEL_ID = '1458596858808107171';
 const ADMIN_ROLE_ID = '528102047770476544'; 
 const CURRENCY = E.SYSTEM.COIN;
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123'; 
+const ADMIN_CREDENTIALS = {
+    username: process.env.ADMIN_USERNAME,
+    password: process.env.ADMIN_PASSWORD
+};
 
 const DEFAULT_CONFIG = {
     REWARD_BASE: 1000,       
@@ -58,15 +61,15 @@ const SHOP_ITEMS = {
         description: 'Không ai biết bên trong có gì nhưng người ta chắc chắn rằng có thể mở ra thứ gì đó quý giá. .', useDescription: 'Gõ `.use lb` để mở.', emoji: E.ITEMS.LOOTBOX 
     },
     lootboxvip: {
-        id: 'lootboxvip', keywords: ['vip', 'lootboxvip', 'box', 'lbvip'], name: 'Lootbox VIP', price: 80000, stock: 10, 
+        id: 'lootboxvip', keywords: ['vip', 'lootboxvip', 'box', 'lbvip'], name: 'Lootbox VIP', price: 50000, stock: 10, 
         description: 'Bề ngoài lấp lánh này chắc chắn sẽ mở ra một viên ngọc quý, nhưng quý như vậy tại sao nó lại ở đây?', useDescription: 'Gõ `.use lbvip` để mở.', emoji: E.ITEMS.LOOTBOX_VIP 
     },
     crate: {
-        id: 'crate', keywords: ['crate', 'nomal', 'create', 'homthuong', 'nc', 'nomal create'], name: 'Nomal Create', price: 0, stock: 0, 
+        id: 'crate', keywords: ['crate', 'nomal', 'create', 'homthuong', 'nc', 'nomal create'], name: 'Nomal Create', price: 25000, stock: 0, 
         description: 'Những chiếc hòm này nằm rải rác trong những khu rừng.', useDescription: 'Gõ `.use nc` để mở.', emoji: E.ITEMS.CRATE 
     },
     crateL: {
-        id: 'crateL', keywords: ['cratel', 'legend', 'createl', 'homvip', 'lc', 'legend create'], name: 'Legend Create', price: 0, stock: 0, 
+        id: 'crateL', keywords: ['cratel', 'legend', 'createl', 'homvip', 'lc', 'legend create'], name: 'Legend Create', price: 65000, stock: 0, 
         description: 'Một chiếc hòm lấp lánh tìm thấy trong tầng cuối cùng của hầm ngục.', useDescription: 'Gõ `.use lc` để mở.', emoji: E.ITEMS.CRATE_L 
     },
 
@@ -88,7 +91,25 @@ const SHOP_ITEMS = {
     gem6a: { id: 'gem6a', name: 'Hoàng Bảo', keywords: ['gem6a', 'hoangbao'], price: 0, stock: 9999, emoji: E.GEMS.gem6a },
     gem7a: { id: 'gem7a', name: 'Thiên Thủy', keywords: ['gem7a', 'thienthuy'], price: 0, stock: 9999, emoji: E.GEMS.gem7a }
 };
+const GEM_PRICE_RANGES = {
+    // --- Gem Cũ (Classic) ---
+    gem1: { min: 1500, max: 3500 },
+    gem2: { min: 3500, max: 7500 },
+    gem3: { min: 7000, max: 12000 },
+    gem4: { min: 12000, max: 21000 },
+    gem5: { min: 35000, max: 50000 },
+    gem6: { min: 50000, max: 120000 },
+    gem7: { min: 100000, max: 250000 },
 
+
+    gem1a: { min: 2500, max: 5000 },
+    gem2a: { min: 5000, max: 8500 },
+    gem3a: { min: 8000, max: 14000 },
+    gem4a: { min: 14000, max: 25000 },
+    gem5a: { min: 45000, max: 90000 },
+    gem6a: { min: 40000, max: 180000 },
+    gem7a: { min: 100000, max: 350000 }
+};
 const GEM_RATES = [
     { id: 'gem1', rate: 25.0 }, 
     { id: 'gem2', rate: 25.0 }, 
@@ -375,8 +396,8 @@ const HUNT_CONFIG = {
 };
 
 module.exports = {
-    ALLOWED_CHANNEL_ID, ADMIN_ROLE_ID, CURRENCY, ADMIN_PASSWORD,
+    ALLOWED_CHANNEL_ID, ADMIN_ROLE_ID, CURRENCY, ADMIN_CREDENTIALS,
     GAME_CONFIG, SHOP_ITEMS, 
     GEM_RATES, GEM_RATES_VIP, GEM_RATES_CRATE, GEM_RATES_CRATE_L,
-    ANIMALS, HORSES, UNO_CONFIG, ANIMAL_STATS, LEVEL_EXP, MILESTONES, HUNT_CONFIG, DEFAULT_CONFIG, calculateStats
+    ANIMALS, HORSES, UNO_CONFIG, ANIMAL_STATS, LEVEL_EXP, MILESTONES,GEM_PRICE_RANGES, HUNT_CONFIG, DEFAULT_CONFIG, calculateStats
 };

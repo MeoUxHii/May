@@ -15,6 +15,9 @@ if (!MONGO_URI) {
 // --- 1. USER & ECONOMY (GLOBAL) ---
 const userSchema = new mongoose.Schema({
     user_id: { type: String, required: true, unique: true },
+    username: { type: String, default: "Unknown" },      // Mới: Tên đăng nhập
+    display_name: { type: String, default: "Unknown" },  // Mới: Tên hiển thị
+    avatar: { type: String, default: null },             // Mới: Avatar ID
     cash: { type: Number, default: 0 },
     bank: { type: Number, default: 0 },
     last_daily: { type: Date, default: null },
@@ -22,6 +25,7 @@ const userSchema = new mongoose.Schema({
 });
 const User = mongoose.model('User', userSchema);
 
+// ... (Các Schema khác giữ nguyên như cũ) ...
 // --- 2. INVENTORY (GLOBAL) ---
 const inventorySchema = new mongoose.Schema({
     user_id: { type: String, required: true },
@@ -39,7 +43,6 @@ const settingSchema = new mongoose.Schema({
     admin_roles: { type: [String], default: [] }, 
     game_channels: { type: Map, of: String, default: {} },
     
-    // Fix lỗi invalid schema type
     work_min: { type: Number, default: 1000 }, 
     work_max: { type: Number, default: 2000 }, 
     work_cd: { type: Number, default: 25 },

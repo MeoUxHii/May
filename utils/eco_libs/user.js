@@ -8,6 +8,9 @@ module.exports = {
         if (!this.users.has(key)) {
             const newUser = {
                 user_id: userId,
+                username: "Unknown",     // Mới
+                display_name: "Unknown", // Mới
+                avatar: null,            // Mới
                 cash: 0, 
                 bank: 0,
                 last_daily: null,
@@ -19,7 +22,26 @@ module.exports = {
         return this.users.get(key);
     },
 
-    async getBalance(userId) { // <--- HÀM NÀY PHẢI CÓ
+    // --- MỚI: CẬP NHẬT THÔNG TIN HIỂN THỊ CỦA USER ---
+    // Hàm này sẽ được gọi mỗi khi user chat, để data luôn mới nhất
+    async updateUserDiscordInfo(userId, discordUser) {
+        if (!discordUser) return;
+        const user = await this.getUser(userId);
+        
+        const newUsername = discordUser.username;
+        const newDisplayName = discordUser.globalName || discordUser.username;
+        const newAvatar = discordUser.avatar;
+
+        // Chỉ update và lưu DB nếu có sự thay đổi để tránh spam write
+        if (user.username !== newUsername || user.display_name !== newDisplayName || user.avatar !== newAvatar) {
+            user.username = newUsername;
+            user.display_name = newDisplayName;
+            user.avatar = newAvatar;
+            this.dirty.users.add(userId);
+        }
+    },
+
+    async getBalance(userId) {
         const user = await this.getUser(userId);
         return { cash: user.cash, bank: user.bank, total: user.cash + user.bank };
     },
@@ -95,6 +117,8 @@ module.exports = {
             const key = uid;
             this.users.set(key, {
                 user_id: uid,
+                username: `Bot Tester ${i}`, // Cập nhật tên giả
+                display_name: `Tester ${i}`,
                 cash: Math.floor(Math.random() * 50000),
                 bank: Math.floor(Math.random() * 500000),
                 streak: 0

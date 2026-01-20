@@ -1,29 +1,10 @@
 // utils/gem_market.js
 const { EmbedBuilder } = require('discord.js');
-const { SHOP_ITEMS, CURRENCY } = require('../config');
+const { SHOP_ITEMS, CURRENCY, GEM_PRICE_RANGES } = require('../config');
 const { MarketHistory } = require('../database/models');
 const economy = require('./economy');
 
 // Cấu hình khoảng giá
-const GEM_PRICE_RANGES = {
-    // --- Gem Cũ (Classic) ---
-    gem1: { min: 1500, max: 3500 },
-    gem2: { min: 3500, max: 7500 },
-    gem3: { min: 7000, max: 12000 },
-    gem4: { min: 12000, max: 21000 },
-    gem5: { min: 35000, max: 50000 },
-    gem6: { min: 50000, max: 120000 },
-    gem7: { min: 100000, max: 250000 },
-
-    // --- Gem Mới (Series A) ---
-        gem1a: { min: 2500, max: 5000 },
-        gem2a: { min: 5000, max: 8500 },
-        gem3a: { min: 8000, max: 14000 },
-        gem4a: { min: 14000, max: 25000 },
-        gem5a: { min: 45000, max: 90000 },
-        gem6a: { min: 40000, max: 180000 },
-        gem7a: { min: 100000, max: 350000 }
-};
 
 let currentMarketPrices = {};
 

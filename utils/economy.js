@@ -50,8 +50,7 @@ class EconomyManager {
         this.saveInterval = null;
         this.isSaving = false;
     }
-
-    // --- MIGRATION ---
+    // --- MIGRATION DỮ LIỆU CŨ (NẾU CẦN) ---
     async performMigration() {
         // (Giữ nguyên logic migration cũ)
         try {
@@ -187,6 +186,69 @@ class EconomyManager {
     async setGameSession(channelId, guildId, type, data) { const session = { channel_id: channelId, guild_id: guildId, game_type: type, data: data, updated_at: new Date() }; this.gameSessions.set(channelId, session); this.dirty.gameSessions.add(channelId); }
     async deleteGameSession(channelId) { this.gameSessions.delete(channelId); this.dirty.gameSessions.add(channelId); }
     isOwner(userId) { return userId === OWNER_ID; }
+
+    async startBackgroundSync(client) {
+        console.log("🔄 [Auto-Sync] Kích hoạt tiến trình đồng bộ dữ liệu ngầm...");
+        
+        const allUsers = Array.from(this.users.values());
+        let missingCount = 0;
+
+        // Đếm xem bao nhiêu người chưa có tên
+        for (const u of allUsers) {
+            if (!u.username || u.username === 'Unknown' || !u.avatar) missingCount++;
+        }
+
+        if (missingCount === 0) {
+            console.log("✅ [Auto-Sync] Dữ liệu User đã đầy đủ.");
+            return;
+        }
+
+        console.log(`📉 [Auto-Sync] Tìm thấy ${missingCount} user thiếu thông tin. Đang tải từ Discord...`);
+
+        let processed = 0;
+        // Chạy loop xử lý từng user
+        for (const u of allUsers) {
+            // Chỉ xử lý những user bị thiếu thông tin
+            if (!u.username || u.username === 'Unknown' || !u.avatar) {
+                try {
+                    let discordUser = client.users.cache.get(u.user_id);
+                    
+                    // Nếu cache không có, phải fetch API
+                    if (!discordUser) {
+                        try {
+                            discordUser = await client.users.fetch(u.user_id);
+                        } catch (e) {
+                            // User này có thể đã xóa acc hoặc bot không thấy, set tên tạm
+                            u.username = `User ${u.user_id}`;
+                            u.display_name = `User ${u.user_id}`;
+                            this.dirty.users.add(u.user_id);
+                        }
+                    }
+
+                    if (discordUser) {
+                        u.username = discordUser.username;
+                        u.display_name = discordUser.globalName || discordUser.username;
+                        u.avatar = discordUser.avatar;
+                        this.dirty.users.add(u.user_id);
+                        processed++;
+                    }
+                } catch (err) {
+                    // Bỏ qua lỗi nhỏ
+                }
+
+                // Nghỉ 1s giữa mỗi lần gọi để tránh bị Discord chặn
+                await new Promise(r => setTimeout(r, 1000));
+                
+                // Cứ 10 người thì log 1 lần cho đỡ spam console
+                if (processed % 10 === 0 && processed > 0) {
+                    console.log(`⏳ [Auto-Sync] Đã cập nhật: ${processed}/${missingCount}`);
+                }
+            }
+        }
+
+        console.log(`✅ [Auto-Sync] Hoàn tất! Đã cập nhật xong ${processed} user.`);
+        await this.saveData(true);
+    }
 }
 
 Object.assign(EconomyManager.prototype, userLib);

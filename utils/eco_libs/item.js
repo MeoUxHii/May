@@ -1,4 +1,5 @@
-// utils/eco_libs/item.js
+const { GemHistory } = require('../../database/models');
+
 module.exports = {
     // Lấy Inventory của User (Global)
     async getInventory(userId) {
@@ -88,4 +89,27 @@ module.exports = {
         }
         return total;
     },
+async logGemHistory(userId, itemId, itemName) {
+        try {
+            await GemHistory.create({
+                user_id: userId,
+                item_id: itemId,
+                item_name: itemName,
+                time: new Date()
+            });
+        } catch (e) {
+            console.error("Lỗi lưu lịch sử ngọc:", e);
+        }
+    },
+
+    // Hàm đếm tổng item trong server (Dùng cho Dashboard realtime)
+    async countItemInServer(itemId) {
+        let total = 0;
+        for (const [key, val] of this.inventory) {
+            if (val.item_id === itemId) {
+                total += val.amount;
+            }
+        }
+        return total;
+    },    
 };

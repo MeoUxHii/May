@@ -3,7 +3,7 @@ const { Client, GatewayIntentBits, Events, EmbedBuilder, ButtonStyle, ActionRowB
 const { ALLOWED_CHANNEL_ID, ADMIN_ROLE_ID, SHOP_ITEMS, CURRENCY, GAME_CONFIG } = require('./config');
 const economy = require('./utils/economy');
 const gemMarket = require('./utils/gem_market'); 
-
+const startDashboard = require('./dashboard/server');
 // Import Game Handlers
 const { handleBauCua } = require('./games/baucua');
 const { handleXiDach } = require('./games/xidach');
@@ -11,7 +11,6 @@ const { handleRoulette } = require('./games/roulette');
 const { handleRace } = require('./games/duangua');
 const { handleEconomyCommand, COMMAND_ALIASES } = require('./games/economy_game');
 
-// --- SỬA LỖI Ở ĐÂY: GỘP IMPORT VÀO 1 DÒNG ---
 const { handleWordChain, loadDictionary, resumeWordChainGames } = require('./games/wordchain'); 
 
 const { handleUnoCommand, handleUnoInteraction } = require('./games/uno_game');
@@ -50,12 +49,25 @@ client.once(Events.ClientReady, async () => {
     await loadDictionary();
     gemMarket.startMarketScheduler();
     
+    // 3. Start Dashboard
+    startDashboard(client); 
     
     // 4. Resume Games
     await resumeWordChainGames(client);
     
+    // --- QUAN TRỌNG: GỌI HÀM CHẠY NGẦM Ở ĐÂY ---
+    // (Không dùng await để nó chạy ẩn, không chặn bot khởi động)
+    economy.startBackgroundSync(client); 
+    
     console.log("🚀 Tất cả hệ thống đã sẵn sàng!");
 });
+
+// --- QUAN TRỌNG: BẮT SỰ KIỆN ĐỔI TÊN/AVATAR ---
+client.on('userUpdate', (oldUser, newUser) => {
+    economy.updateUserDiscordInfo(newUser.id, newUser);
+});
+
+client.login(process.env.BOT_TOKEN);
 
 const dropCooldowns = new Map();
 
@@ -81,6 +93,10 @@ async function checkChannel(message, gameType) {
 
 client.on(Events.MessageCreate, async (message) => {
     if (message.author.bot || !message.guild) return;
+
+    // --- CẬP NHẬT INFO USER NGAY LẬP TỨC (QUAN TRỌNG) ---
+    // Giúp Dashboard và LB có tên user mà không cần fetch lại
+    economy.updateUserDiscordInfo(message.author.id, message.author);
 
     const config = await economy.getConfig(message.guild.id);
     const prefix = config.prefix || '.';
@@ -166,8 +182,6 @@ client.on(Events.MessageCreate, async (message) => {
             await handleShop(message, rawCmd.startsWith('.') ? rawCmd : `.${cmd}`, args);
         } 
         else if (cmd === 'check') await handleCheckPrice(message);
-        
-        // --- LOGIC BÁN (.ban / .sell) ---
         else if (cmd === 'ban' || cmd === 'sell') {
             if (args.length === 0) return message.reply("Bạn muốn bán gì? VD: `.ban sau` hoặc `.ban sau 10`");
 
@@ -211,15 +225,12 @@ client.on(Events.MessageCreate, async (message) => {
                 const ctx = interaction || message;
                 const uid = ctx.member ? ctx.member.id : ctx.author.id;
 
-                // Nếu là Thú -> Gọi handler Zoo
                 if (selected.type === 'animal') {
                     executeSellZoo(ctx, selected, quantity, isAll);
                 } 
-                // Nếu là Item (Gem) -> Xử lý trực tiếp logic bán Global tại đây
                 else if (selected.type === 'item') {
                     const item = selected.data || selected;
                     
-                    // Check Stock Global
                     const currentStock = await economy.getItemAmount(uid, item.id);
                     if (currentStock <= 0) {
                         const msg = `🎒 Bạn không có **${item.name}** nào để bán.`;
@@ -272,7 +283,6 @@ client.on(Events.MessageCreate, async (message) => {
                             const stockCheck = await economy.getItemAmount(uid, item.id);
                             if (stockCheck < sellQty) return i.update({ content: "Số lượng không đủ.", embeds: [], components: [] });
 
-                            // Global Remove & Add Money
                             await economy.removeItem(uid, item.id, sellQty);
                             await economy.addMoney(uid, totalPrice, "Sell Gem");
 
@@ -286,14 +296,12 @@ client.on(Events.MessageCreate, async (message) => {
                 }
             };
 
-            // Nếu nhiều kết quả -> Hiện menu
             if (allMatches.length > 1) {
                 await showSelectionMenu(message, allMatches, 'sell', processSellSelection);
             } else {
                 processSellSelection(allMatches[0], null);
             }
         }
-        
         else if (cmd === 'reroll') {
              if (message.author.id === message.guild.ownerId || message.author.id === '414792622289190917') {
                  gemMarket.updateMarketPrices();
@@ -339,5 +347,23 @@ client.on(Events.InteractionCreate, async (interaction) => {
         }
     }
 });
+process.on('unhandledRejection', (reason, promise) => {
+    // Nếu lỗi là Rate Limit (Opcode 8) thì bỏ qua, không crash bot
+    if (reason && reason.code === 429) {
+        console.warn('⚠️ [Rate Limit] Bot đang bị Discord giới hạn requests. Đang tự động giảm tốc độ...');
+        return;
+    }
+    // Nếu lỗi GatewayRateLimitError từ thư viện
+    if (reason && reason.name === 'GatewayRateLimitError') {
+        console.warn('⚠️ [Gateway Limit] Đang bị giới hạn Gateway. Bỏ qua yêu cầu.');
+        return;
+    }
+    
+    console.error('❌ Unhandled Rejection:', reason);
+});
 
+process.on('uncaughtException', (err) => {
+    console.error('❌ Uncaught Exception:', err);
+    // Không exit process để bot sống dai hơn
+});
 client.login(process.env.DISCORD_TOKEN);

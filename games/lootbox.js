@@ -163,6 +163,7 @@ async function openLootbox(message, userId, item, amount) {
             if (!selectedGem) selectedGem = SHOP_ITEMS[fallbackGemId]; // Fallback đúng loại
 
             await economy.addItem(userId, selectedGem.id, 1);
+            await economy.logGemHistory(userId, selectedGem.id, selectedGem.name);
             
             processLog += `Hòm số ${i} đã mở <a:lootboxopened:1461118461186019330> và nhận được ${selectedGem.emoji} **${selectedGem.name}**\n`;
             
